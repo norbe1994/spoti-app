@@ -3,15 +3,15 @@ import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 
 import { HttpClientModule } from '@angular/common/http'
-
+// importar componentes
 import { AppComponent } from './app.component'
 import { HomeComponent } from './components/home/home.component'
 import { SearchComponent } from './components/search/search.component'
 import { ArtistaComponent } from './components/artista/artista.component'
 import { NavbarComponent } from './components/shared/navbar/navbar.component'
-
 // importar rutas
 import { ROUTES } from './app.routes'
+// importar servicios
 
 @NgModule({
   declarations: [
