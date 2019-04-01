@@ -15,10 +15,11 @@ import { ROUTES } from './app.routes'
 
 // importar pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
-import { TarjetasComponent } from './components/tarjetas/tarjetas.component'
+import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
+import { LoadingComponent } from './components/shared/loading/loading.component'
 
 @NgModule({
-	declarations: [AppComponent, HomeComponent, SearchComponent, ArtistaComponent, NavbarComponent, NoimagePipe, TarjetasComponent],
+	declarations: [AppComponent, HomeComponent, SearchComponent, ArtistaComponent, NavbarComponent, NoimagePipe, TarjetasComponent, LoadingComponent],
 	imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(ROUTES, { useHash: true })],
 	providers: [],
 	bootstrap: [AppComponent],
