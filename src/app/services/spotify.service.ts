@@ -18,10 +18,11 @@ export class SpotifyService {
 	}
 
 	getNewReleases() {
-		return this.getQuery('browse/new-releases?limit=30').pipe(map(data => data['albums'].items))
+		return this.getQuery('browse/new-releases?limit=20').pipe(map(data => data['albums'].items))
 	}
 
 	getArtista(termino: string) {
+		if (!termino) return this.getQuery('browse/new-releases?limit=20').pipe(map(data => data['albums'].items))
 		return this.getQuery(`search?q=${termino}&type=artist&limit=15`).pipe(map(data => data['artists'].items))
 	}
 }
