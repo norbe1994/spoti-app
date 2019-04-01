@@ -13,20 +13,14 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component'
 import { ROUTES } from './app.routes'
 // importar servicios
 
+// importar pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { TarjetasComponent } from './components/tarjetas/tarjetas.component'
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    SearchComponent,
-    ArtistaComponent,
-    NavbarComponent,
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    RouterModule.forRoot(ROUTES, { useHash: true }),
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+	declarations: [AppComponent, HomeComponent, SearchComponent, ArtistaComponent, NavbarComponent, NoimagePipe, TarjetasComponent],
+	imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(ROUTES, { useHash: true })],
+	providers: [],
+	bootstrap: [AppComponent],
 })
 export class AppModule {}
